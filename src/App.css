@@ -1,38 +1,184 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body
+{
+  overscroll-behavior: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container 
+{
+  padding: 40px 50px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgb(99, 99, 216);
+}
+
+.title
+{
+  font-size: 3em;
+  letter-spacing: 2px;
+}
+
+.title span 
+{
+  color: pink;
+}
+
+.content 
+{
+  display: flex;
+  
+  align-items: center;
+  overflow: hidden;
+}
+
+.gif-cont
+{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.gif-cont img
+{
+  border: 5px solid pink;
+  
+  margin-bottom: 40px;
+  margin-right: 10px;
+}
+
+/* .gif-cont input 
+{
+  padding: 12px 18px;
+  width: 30%;
+  text-align: center;
+  border-radius: 20px;
+  border: 5px solid pink;
+  background: transparent;
+  color: rgb(161, 32, 133);
+  font-weight: 900;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+} */
+/* 
+.gif-cont input::placeholder
+{
+  color: rgba(0, 0, 0, 0.562);
+  font-weight: 900;
+} */
+
+/* .gif-cont button 
+{
+  border: 2px solid white;
+  background: transparent;
+  letter-spacing: 4px;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  
+} */
+form
+{
+  width: 100%;
+}
+
+
+.input-field
+{
+  position: relative;
+  height: 40px;
+  width: 100%;
+}
+
+.input-field input 
+{
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+
+}
+
+.input-field label 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: black;
+  pointer-events: none ;
+  display: block;
+  transition: 0.5s;
+}
+
+.input-field input:focus
+{
+  border: none;
+  outline: none;
+}
+
+.input-field input:focus + label
+{
+  transform: translateY(-35px);
+  font-size: 14px;
+  color: rgb(77, 212, 172);
+  padding: 2px 6px;
+  border-radius: 5px;
+
+}
+
+.input-field span 
+{
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: block;
+  background: pink;
+  width: 100%;
+  height: 2px;
+
+}
+
+.input-field span:before 
+{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  background: rgb(69, 212, 212);
+}
+
+.input-field input:focus ~ span:before
+{
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+ form button 
+{
+  background: transparent;
+  border: pink 4px solid;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 7px 10px;
+  letter-spacing: 3px;
+  border-radius: 4px;
+  cursor: pointer;
 }
